@@ -25,6 +25,8 @@
             <div class="col-md-3">
                 <div id="dashboard-nav" class="list-group position-sticky top-0">
                     <a class="list-group-item list-group-item-action" href="#frequency-table">Frequency Tables (One-way)</a>
+                    <a class="list-group-item list-group-item-action" href="#cars-over-50000">Cars sold over 50,000</a>
+                    <a class="list-group-item list-group-item-action" href="#manufacturer-totals">Total selling price by manufacturer</a>
                 </div>
             </div>
 
@@ -38,6 +40,24 @@
                         </div>
                         <div class="card-body">
                             {{ frequency_table|safe }}
+                        </div>
+                    </div>
+
+                    <div id="cars-over-50000" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Cars sold over 20,000
+                        </div>
+                        <div class="card-body table-responsive">
+                            {{ cars_over_50000|safe }}
+                        </div>
+                    </div>
+
+                    <div id="manufacturer-totals" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Total selling price by manufacturer
+                        </div>
+                        <div class="card-body table-responsive">
+                            {{ manufacturer_totals|safe }}
                         </div>
                     </div>
                 </div>
